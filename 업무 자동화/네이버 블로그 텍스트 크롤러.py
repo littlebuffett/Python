@@ -16,7 +16,9 @@ real_soup = BeautifulSoup(real_html,'html.parser')
 
 title = real_soup.find(class_='se-module se-module-text se-title-text').get_text()
 
+print(title) #제목 출력
+
 content = real_soup.find(class_='se-main-container').find_all(class_='se-module se-module-text')
 
 for i in content:
-    print(i.get_text())
+    print(i.get_text()) #본문 출력
