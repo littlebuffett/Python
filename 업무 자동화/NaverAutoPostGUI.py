@@ -22,7 +22,7 @@ def getNaverBlogPost(url):
     content = real_soup.find(class_='se-main-container').find_all(class_='se-module se-module-text')
 
     for i in content:
-        print(i.get_text())
+        print(i.get_text(separator='\n'))
 
     return content
 
